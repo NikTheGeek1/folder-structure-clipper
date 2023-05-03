@@ -7,6 +7,7 @@ import pyperclip
 def parse_ignore_list(ignore_file):
     with open(ignore_file, "r") as f:
         ignore_list = [line.strip() for line in f.readlines()]
+        print(f"Ignoring {ignore_list} ")
     return ignore_list
 
 def get_formatted_structure(path, ignore_list, level=0):
